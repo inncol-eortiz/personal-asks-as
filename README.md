@@ -1,11 +1,9 @@
 <div align="center">
   <div style="display: flex; justify-content: space-between; align-items: center">
-    <img src="https://developer.amazon.com/assets/images/logos/alexa_logo_cwmlgroup.png" width="150" alt="Alexa Logo" align="left">
-    <img src="https://www.utxj.edu.mx/assets/img/logo_utxj.png" width="150" alt="UTXJ Logo" align="right">
+    <img src="images/inncol-logo.svg" width="150" alt="Alexa Logo" align="left">
+    <img src="images/logo-utxj.jpeg" width="150" alt="UTXJ Logo" align="right">
   </div>
 </div>
-
-<br><br><br>
 
 # Saluda Haziel - Alexa Skill
 
@@ -42,6 +40,36 @@ La skill está desarrollada utilizando:
 - Node.js
 - Alexa Skills Kit (ASK) SDK v2
 - AWS Lambda
+
+## Documentación del Proceso
+
+Luego de tener creada la skill básica de saludo, se llevo a cabo lo siguiente.
+
+#### Creación del Nuevo Intent
+El nuevo intent que maneja las preguntas fue llamado `PersonalAsksIntent`
+
+<img src="images/intents.png" width="450" style="margin-block: auto;" align="center" alt="intents">
+
+#### Asignar las opciones a responder en el nuevo intent
+Para que Alexa pueda responder a las preguntas, se usó un slot para poder definir las preguntas dinamicas pero con respuestas estaticas en el handler.
+
+<img src="images/intent-specs.png" width="450" style="margin-block: auto;" align="center" alt="intent specs">
+
+#### Nuevo Slot
+Se utilizo un slot con valores que pertenecen a cada una de las posibles preguntas para que el handler pueda responder de forma dinámica
+
+<img src="images/slot-types.png" width="450" style="margin-block: auto;" align="center" alt="slot types">
+
+### Valores del Slot
+Se implemento cada posible valor del slot
+
+<img src="images/slot-values.png" width="450" style="margin-block: auto;" align="center" alt="slot values">
+
+### Handler del Intent
+
+El nuevo intent fue manejado en otro handler el cual mediante un Object Literal, evalua que valor del slot coincide con los valores del objeto literal y si coincide retorna la respuesta de la derecha y en caso de no coincidir con ninguno, retorna el valor por defecto.
+
+<img src="images/code.png" width="450" style="margin-block: auto;" align="center" alt="handler">
 
 ## Desarrollador
 **Nombre**: Eli Haziel Ortiz Ramirez  
