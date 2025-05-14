@@ -1,0 +1,78 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "slots": [],
+          "name": "HelloWorldIntent",
+          "samples": [
+            "hola",
+            "como estás",
+            "di hola mundo",
+            "di hola",
+            "hola mundo"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "questionType",
+              "type": "QuestionType"
+            }
+          ],
+          "name": "PersonalAsksIntent",
+          "samples": [
+            "quien {questionType}",
+            "cuál es su {questionType}",
+            "qué {questionType}",
+            "quien es su {questionType}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "carrera estudias"
+              }
+            },
+            {
+              "name": {
+                "value": "cantante favorito"
+              }
+            },
+            {
+              "name": {
+                "value": "creo esta skill"
+              }
+            },
+            {
+              "name": {
+                "value": "color favorito"
+              }
+            }
+          ],
+          "name": "QuestionType"
+        }
+      ],
+      "invocationName": "saluda jaziel"
+    }
+  }
+}
